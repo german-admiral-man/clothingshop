@@ -501,3 +501,42 @@ ul li a:hover .name span
   box-shadow: inset 0 1px 2px 1px #555;
   -webkit-transition: border .1s ease-out;
 }
+
+.rotator {
+  right: 11.5%;
+  bottom: 12%;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 25px 25px;
+  box-shadow: 0px 10px 20px 20px rgba(0, 0, 0, 0.17);
+}
+
+.buttons {
+  display: inline-flex;
+}
+
+.buttons span:not(:last-child) {
+  margin-right: 40px;
+  margin-left: 13px;
+  margin-top: -1px;
+  margin-bottom: 0px;
+}
+
+
+.rotator span {
+  font-size: 2rem;
+  color: #f98f08;
+}
+
+.rotator span:hover {
+  font-size: 2rem;
+  color: #f98f08;
+  cursor: pointer;
+}
+
+.rotator h3 {
+  font-size: 0.8rem;
+  margin: 0;
+  padding: 5px 5px;
+}
