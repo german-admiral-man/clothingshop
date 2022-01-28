@@ -355,6 +355,23 @@ RegisterNUICallback('saveOutfit', function(data, cb)
     end, currentPrice, data.name)
 end)
 
+
 RegisterNetEvent("clothingshop:sendNotify", function(text)
     ESXnotif(text)
 end)
+
+RegisterNUICallback('character_rotation', function(data, cb)
+	charRotation(data.rotationType)
+end)
+
+function charRotation(type)
+	local heading = currentHeading
+	
+	if type == "left" then 
+		SetEntityHeading(PlayerPedId(), currentHeading - 20)
+		currentHeading = currentHeading - 20 
+	elseif type == "right" then 
+		SetEntityHeading(PlayerPedId(), currentHeading + 20)
+		currentHeading = currentHeading + 20
+	end 
+end
