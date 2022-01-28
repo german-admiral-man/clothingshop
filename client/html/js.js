@@ -96,6 +96,18 @@ $(document).ready(function() {
          $.post('http://clothingshop/close', JSON.stringify({}));
     });
 
+	$(".rotation_left").click(function() {
+		$.post('http://clothingshop/character_rotation', JSON.stringify({
+			rotationType: "left"
+		}));
+	});
+	
+    $(".rotation_right").click(function() {
+        $.post('http://clothingshop/character_rotation', JSON.stringify({
+            rotationType: "right"
+        }));
+    });
+
     $("#accept_s2").click(function() {
         let inputValue = $(".inputSetOutName").val()
         if (!inputValue) {
@@ -116,6 +128,7 @@ function openCreateOutfit() {
     $.post('http://clothingshop/movePed', JSON.stringify({}));
     $('.ContainerSection').css('display', 'block');
     $('.CreateOutfit').css('display', 'block');
+	$('.rotator').css('display', 'block');
 }
 
 function openManageOutfit() {
@@ -137,6 +150,7 @@ function closeMainMenu() {
     $('.NotifSection').css('display', 'none');
     $('.notif_succ').css('display', 'none');
     $('.notif_succ_s').css('display', 'none');
+	$('.rotator').css('display', 'none');
     $('.button_1').css('display', 'block');
     $('.button_2').css('display', 'block');
 }
